@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  
+}
+.tab {
+  display: inline-block;
+  margin-left: 40px;
 }
 
 .App-logo {
