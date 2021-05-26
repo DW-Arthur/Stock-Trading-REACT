@@ -18,6 +18,7 @@ function App() {
         >
           Basic Trading Termninology
         </a>
+        <p>User 1 <span class="tab"></span> User 2 <span class="tab"></span> User 3</p>
       </header>
     </div>
   );
