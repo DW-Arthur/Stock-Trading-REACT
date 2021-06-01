@@ -1,6 +1,8 @@
 import stock from './stock.gif';
 import './App.css';
 import { Component } from 'react';
+import Resource from './resources'
+import {Route, link} from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -35,7 +37,9 @@ class App extends Component {
           rel="noopener noreferrer"
         >
           Basic Trading Termninology
+
         </a>
+        <Route exact path="/resource" component ={Resource}/>
         <p>User 1 <span class="tab"></span> User 2 <span class="tab"></span> User 3</p>
         <p className="App-intro">;{this.state.apiResponse}</p>
         <noscript>Test</noscript>
