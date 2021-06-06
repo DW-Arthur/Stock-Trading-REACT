@@ -1,12 +1,13 @@
 import React from 'react'
 
 function Ticker() {
+    
     var unirest = require("unirest");
 
     var req = unirest("GET", "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-summary");
 
     req.query({
-	    "symbol": "AMRN",
+	    "symbol": "SPY",
 	    "region": "US"
     });
 
@@ -16,18 +17,25 @@ function Ticker() {
         "useQueryString": true
     });
 
-    var price 
-    test = "1234"
+    var price
+    var test = ""
+    var test2 = "1232"
+
     req.end(function (res) {
         
         if (res.error) throw new Error(res.error);
-        price = res.body
-        test = price.quoteType.symbol
+
+        console.log(res.body);
+        price= res.body
+        test = console.log(price.quoteType.symbol)
+        window.test2 = price.quoteType.longName
+        console.log(window.test2)
     });
+    
 
     return(
         <div>
-            {}
+            SPY: {window.test2}
         </div>
          )
  }
