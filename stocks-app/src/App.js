@@ -2,6 +2,7 @@ import stock from './stock.gif';
 import './App.css';
 import { Component } from 'react';
 import Resource from './resources'
+import Ticker from './Ticker'
 import {Route, link} from 'react-router-dom';
 
 class App extends Component {
@@ -44,7 +45,12 @@ class App extends Component {
         <p className="App-intro">;{this.state.apiResponse}</p>
         <noscript>Test</noscript>
       </header>
-    </div>
+      <div>
+        <Ticker />
+      </div>
+
+      
+      </div>
     )
     
   }
