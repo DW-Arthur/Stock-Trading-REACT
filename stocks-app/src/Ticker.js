@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function Ticker() {
+
+    const [stockName, setStockName] = useState(0);
+
     
     var unirest = require("unirest");
 
@@ -19,8 +22,6 @@ function Ticker() {
 
     var price
     var test = ""
-    var test2 = ""
-    test2 = ""
 
     req.end(function (res) {
         if (res.error) throw new Error(res.error);
@@ -28,14 +29,14 @@ function Ticker() {
         console.log(res.body);
         price= res.body
         test = console.log(price.quoteType.symbol)
-        test2= price.quoteType.exchange
+        setStockName(price.quoteType.exchange)
 
     });
     
 
     return(
         <div>
-            SPY: {test2}
+            SPY: {stockName}
         </div>
          )
  }
