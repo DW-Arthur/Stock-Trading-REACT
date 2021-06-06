@@ -16,16 +16,18 @@ function Ticker() {
         "useQueryString": true
     });
 
-
+    var price 
+    test = "1234"
     req.end(function (res) {
+        
         if (res.error) throw new Error(res.error);
-
-        console.log(res.body);
+        price = res.body
+        test = price.quoteType.symbol
     });
 
     return(
         <div>
-
+            {}
         </div>
          )
  }
