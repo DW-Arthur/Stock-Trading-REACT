@@ -30,7 +30,6 @@ function Ticker() {
         price= res.body
         test = console.log(price.quoteType.symbol)
         setStockName(price.quoteType.exchange)
-
     });
     
 
