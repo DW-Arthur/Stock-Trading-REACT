@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function Ticker() {
+<<<<<<< HEAD
+=======
+
+    const [stockName, setStockName] = useState(0);
+
+>>>>>>> 785dee21de36c76c6243daabafbac25b42ecf0e9
     
     var unirest = require("unirest");
 
@@ -19,7 +25,10 @@ function Ticker() {
 
     var price
     var test = ""
+<<<<<<< HEAD
     var test2 = "1232"
+=======
+>>>>>>> 785dee21de36c76c6243daabafbac25b42ecf0e9
 
     req.end(function (res) {
         
@@ -28,14 +37,23 @@ function Ticker() {
         console.log(res.body);
         price= res.body
         test = console.log(price.quoteType.symbol)
+<<<<<<< HEAD
         window.test2 = price.quoteType.longName
         console.log(window.test2)
+=======
+        setStockName(price.quoteType.exchange)
+
+>>>>>>> 785dee21de36c76c6243daabafbac25b42ecf0e9
     });
     
 
     return(
         <div>
+<<<<<<< HEAD
             SPY: {window.test2}
+=======
+            SPY: {stockName}
+>>>>>>> 785dee21de36c76c6243daabafbac25b42ecf0e9
         </div>
          )
  }
