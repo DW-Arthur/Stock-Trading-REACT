@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function Ticker() {
 
@@ -22,17 +22,15 @@ function Ticker() {
 
     var price
     var test = ""
-    var test2 = "1232"
 
     req.end(function (res) {
-        
         if (res.error) throw new Error(res.error);
 
         console.log(res.body);
         price= res.body
         test = console.log(price.quoteType.symbol)
-        window.test2 = price.quoteType.longName
-        console.log(window.test2)
+        setStockName(price.quoteType.exchange)
+
     });
     
 
