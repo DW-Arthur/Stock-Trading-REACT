@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   callAPI() {
-      fetch("http://localhost:9000/testAPI")
+      fetch("http://localhost:9000/testAPI") //"testAPI" invoke the function in api/routes/testAPI.js
           .then(res => res.text())
           .then(res => this.setState({ apiResponse: res }))
           .catch(err => err);
@@ -40,7 +40,7 @@ class App extends Component {
           Basic Trading Termninology
 
         </a>
-        <Route exact path="/resource" component ={Resource}/>
+        <Route exact path="/resource" component ={Resource}/>  {/* create the Resource page */}
         <p>User 1 <span class="tab"></span> User 2 <span class="tab"></span> User 3</p>
         <p className="App-intro">;{this.state.apiResponse}</p>
         <noscript>Test</noscript>
