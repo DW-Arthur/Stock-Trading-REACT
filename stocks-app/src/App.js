@@ -3,14 +3,13 @@ import Stock from './Stock';
 import './App.css';
 import React, { Component } from 'react';
 import Resource from './resources'
-import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
+import {Switch, Route, Link} from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Shop from './components/Shop';
 import Links from './components/Links';
 import Ticker from './Ticker'
-import {Route, link} from 'react-router-dom';
-
+import {BrowserRouter} from 'react-router-dom';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -28,11 +27,6 @@ class App extends Component {
       this.callAPI(); //componentWillMount will trgger before the initial render(when the component load)
   }
 
-
-
-
-
-  
   render() {
     return(
       <div className="App">
@@ -62,9 +56,7 @@ class App extends Component {
           <Link to="/links">Links </Link>
         </div>
 
-
         
-
         <a
           className="App-link"
           href="https://www.investopedia.com/"
@@ -78,7 +70,6 @@ class App extends Component {
         <p>User 1 <span class="tab"></span> User 2 <span class="tab"></span> User 3</p>
         <p className="App-intro">;{this.state.apiResponse}</p>
         <noscript>Test</noscript>
-
       </header>
       <div>
         <Ticker />
