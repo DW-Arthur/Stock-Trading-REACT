@@ -3,22 +3,13 @@ import Stock from './Stock';
 import './App.css';
 import React, { Component } from 'react';
 import Resource from './resources'
-<<<<<<< HEAD
-=======
-import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
+import {Switch, Route, Link} from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Shop from './components/Shop';
 import Links from './components/Links';
->>>>>>> 2a302388fc54b66fcd16f8280403341ce100071d
 import Ticker from './Ticker'
-import {Route, link} from 'react-router-dom';
-import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Shop from './components/Shop';
-import Links from './components/Links';
-
+import {BrowserRouter} from 'react-router-dom';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -35,13 +26,6 @@ class App extends Component {
   componentWillMount() {
       this.callAPI(); //componentWillMount will trgger before the initial render(when the component load)
   }
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 2a302388fc54b66fcd16f8280403341ce100071d
 
   render() {
     return(
@@ -72,13 +56,7 @@ class App extends Component {
           <Link to="/links">Links </Link>
         </div>
 
-<<<<<<< HEAD
         
-=======
-
-        
-
->>>>>>> 2a302388fc54b66fcd16f8280403341ce100071d
         <a
           className="App-link"
           href="https://www.investopedia.com/"
@@ -92,10 +70,6 @@ class App extends Component {
         <p>User 1 <span class="tab"></span> User 2 <span class="tab"></span> User 3</p>
         <p className="App-intro">;{this.state.apiResponse}</p>
         <noscript>Test</noscript>
-<<<<<<< HEAD
-=======
-
->>>>>>> 2a302388fc54b66fcd16f8280403341ce100071d
       </header>
       <div>
         <Ticker />
