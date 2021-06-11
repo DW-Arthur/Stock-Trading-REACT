@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Plot from 'react-plotly.js'; //$ npm install react-plotly.js plotly.js
 
 class Stock extends React.Component{
@@ -7,18 +7,22 @@ class Stock extends React.Component{
 
         this.state = {
             stockCharXValue : [],
-            stockCharYValue : []
+            stockCharYValue : [],
+            symbol: "FB"
         }
+        
     }
 
+   
     componentDidMount(){
-        this.fetchStock();
+        this.fetchStock(this.state.symbol);
     }
 
-    fetchStock(){
+    fetchStock(symbolpara){
         const pointerToThis = this;
         const API_KEY = 'P7J8QW3O1K1CDRFJ';
-        let StockSymbol = 'FB';
+        let StockSymbol = symbolpara;
+        console.log("ploting grapth is "+ StockSymbol)
         let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${StockSymbol}&outputsize=compact&apikey=${API_KEY}`;
         //API getting last 100 days of data
         let stockChartXValuesFunction = [];
@@ -53,14 +57,33 @@ class Stock extends React.Component{
               
           )
     }
+    onChange = e=>{
+        this.setState({symbol : e.target.value});
+        console.log("e.targer.value gives :"+ e.target.value)
+        console.log(this.state.symbol) //this prints the previous one...werid
+        this.fetchStock(e.target.value)
+    }
 
     render(){
+
+        const {symbol} = this.state;
         return(
             <div>
                 <h1>
                     Stock Market
                     
                 </h1>
+                <form>
+                    
+                    <label htmlFor = "options">Pick an Company: </label>
+                    <select id="options" value = {symbol} onChange={this.onChange}>
+                        <option value = "MSFT">Microsoft</option>
+                        <option value = "FB">Facebook</option>
+                        <option value = "AMZN">Amazon</option>
+                    </select>   
+
+                    <h3> Company Symbol : {this.state.symbol} </h3>
+                </form>
                 <Plot
                     data={[
                     {
