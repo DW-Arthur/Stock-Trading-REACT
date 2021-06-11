@@ -1,4 +1,5 @@
 import stock from './stock.gif';
+import Stock from './Stock';
 import './App.css';
 import { Component } from 'react';
 import Resource from './resources'
@@ -11,22 +12,26 @@ class App extends Component {
     this.state = { apiResponse: "" };
   }
 
-  callAPI() {
+  callAPI() {  //the object that .then returns, got passed to the next .then as parameter.
       fetch("http://localhost:9000/testAPI") //"testAPI" invoke the function in api/routes/testAPI.js
-          .then(res => res.text())
-          .then(res => this.setState({ apiResponse: res }))
+          .then(res => res.text()) //converte res to text format
+          .then(res => this.setState({ apiResponse: res})) //set state to store res in the apiResponse
           .catch(err => err);
   }
 
   componentWillMount() {
-      this.callAPI();
+      this.callAPI(); //componentWillMount will trgger before the initial render(when the component load)
   }
 
+  
   render() {
     return(
       <div className="App">
       <header className="App-header">
         <img src={stock} className="App-logo" alt="logo" />
+        <Stock>
+
+        </Stock>
         <p>
           Stock Trading Competition
         </p>

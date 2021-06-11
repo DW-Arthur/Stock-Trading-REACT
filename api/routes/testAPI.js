@@ -28,8 +28,9 @@ if(port == null || port == "") {
 }
 module.exports = app
 
-
+/*
 app.listen(port, function() {
  console.log("Server started successfully");
 });
+*/
 
