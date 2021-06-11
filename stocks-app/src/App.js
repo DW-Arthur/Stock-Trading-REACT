@@ -63,7 +63,7 @@ class App extends Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Basic Trading Termninology
+          Basic Trading Termninologydd
 
         </a>
         <Route exact path="/resource" component ={Resource}/>  {/* create the Resource page */}
