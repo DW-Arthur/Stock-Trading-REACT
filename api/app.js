@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cors = require("cors");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var testAPIRouter = require("./routes/testAPI");
+var testAPIRouter = require("./routes/testAPI"); //variable to link to the testAPI
 var app = express();
 
 // view engine setup
@@ -22,7 +22,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use("/testAPI", testAPIRouter);
+app.use("/testAPI", testAPIRouter); //adding middleware layers by calling use(), we can find "testAPI" in the stocks-app/src/app.js
+//app.use([path,] callback [, callback...])
+//Mounts the specified middleware function or functions at the specified path: the middleware function is executed when the base of the requested path matches path.
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
