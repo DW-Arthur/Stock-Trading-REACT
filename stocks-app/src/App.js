@@ -1,8 +1,12 @@
 import stock from './stock.gif';
 import './App.css';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Resource from './resources'
-import {Route, link} from 'react-router-dom';
+import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Shop from './components/Shop';
+import Links from './components/Links';
 
 class App extends Component {
   constructor(props) {
@@ -29,20 +33,44 @@ class App extends Component {
         <p>
           Stock Trading Competition
         </p>
-        
-        <a
-          className="App-link"
-          href="https://www.investopedia.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Basic Trading Termninology
 
-        </a>
-        <Route exact path="/resource" component ={Resource}/>
-        <p>User 1 <span class="tab"></span> User 2 <span class="tab"></span> User 3</p>
-        <p className="App-intro">;{this.state.apiResponse}</p>
-        <noscript>Test</noscript>
+        <main>
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/about" component={About} />
+            <Route path="/shop" component={Shop} />
+            <Route path="/links" component={Links} />
+            <Route component={Error} />
+          </Switch>
+        </main>
+
+        <div>
+          <Link to="/">Home </Link>
+          <Link to="/about">About Us </Link>
+          <Link to="/shop">Shop Now </Link>
+          <Link to="/links">Links </Link>
+        </div>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
       </header>
     </div>
     )
