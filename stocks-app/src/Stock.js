@@ -38,11 +38,11 @@ class Stock extends React.Component{
             function(data){
                 console.log('response data test')
                   console.log(data);
-
                   for( var key in data['Time Series (Daily)'])
                   {
                       stockChartXValuesFunction.push(key);
                       stockChartYValuesFunction.push(data['Time Series (Daily)'][key]['1. open']);
+                      
                   }
                   pointerToThis.setState(
                       {
@@ -83,6 +83,7 @@ class Stock extends React.Component{
                     </select>   
 
                     <h3> Company Symbol : {this.state.symbol} </h3>
+                    <p>current price: {this.state.stockCharYValue[0]}</p>
                 </form>
                 <Plot
                     data={[
