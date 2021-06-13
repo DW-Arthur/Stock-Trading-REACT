@@ -12,12 +12,14 @@ router.get('/', function(req, res, next) {
 module.exports = router;
 */
 
+//this file defines a callback/middleware function
 
-var express = require('express');
-var app = express.Router();
+var express = require('express'); 
+var app = express.Router(); //.Router() returns an Router object
 
-app.get('/', function(req, res,next) {
-  res.send('Backend is working');
+app.get('/', function(req, res,next) { //app.get handles get requset
+  res.send('Backend is working'); //testing back end is working
+  //respond "backend is working when a GET request is made to the homepage"
 });
 
 let port = process.env.PORT;
@@ -31,3 +33,4 @@ app.listen(port, function() {
  console.log("Server started successfully");
 });
 */
+
