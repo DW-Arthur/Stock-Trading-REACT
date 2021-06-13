@@ -13,7 +13,7 @@ import {BrowserRouter} from 'react-router-dom';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { apiResponse: "" };
+    this.state = { apiResponse: ""}
   }
 
   callAPI() {  //the object that .then returns, got passed to the next .then as parameter.
@@ -63,7 +63,7 @@ class App extends Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Basic Trading Termninologydd
+          Basic Trading Termninology
 
         </a>
         <Route exact path="/resource" component ={Resource}/>  {/* create the Resource page */}

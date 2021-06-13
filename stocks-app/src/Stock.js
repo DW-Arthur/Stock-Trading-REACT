@@ -80,6 +80,10 @@ class Stock extends React.Component{
                         <option value = "MSFT">Microsoft</option>
                         <option value = "FB">Facebook</option>
                         <option value = "AMZN">Amazon</option>
+                        <option value = "AAPL">Apple</option>
+                        <option value = "NKE">Nike Inc</option>
+                        <option value = "ADS">Adidas AG</option>
+                        <option value = "KO">Coca-Cola</option>
                     </select>   
 
                     <h3> Company Symbol : {this.state.symbol} </h3>
