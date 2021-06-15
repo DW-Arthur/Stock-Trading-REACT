@@ -8,6 +8,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Shop from './components/Shop';
 import Links from './components/Links';
+import BuyStocks from './components/BuyStocks';
 import Ticker from './Ticker'
 import {BrowserRouter} from 'react-router-dom';
 class App extends Component {
@@ -37,7 +38,7 @@ class App extends Component {
 
         </Stock>
         <p>
-          Stock Trading Competition
+          Stock Trading App
         </p>
 
         <main>
@@ -46,9 +47,12 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/shop" component={Shop} />
             <Route path="/links" component={Links} />
+            <Route path="/buystocks" component={BuyStocks} />
             <Route component={Error} />
           </Switch>
         </main>
+
+        <Link to="/buystocks">  Click To Buy Stocks  </Link>
 
         <div>
           <Link to="/"> Home  </Link>
