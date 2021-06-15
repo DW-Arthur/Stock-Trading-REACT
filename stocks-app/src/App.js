@@ -51,10 +51,10 @@ class App extends Component {
         </main>
 
         <div>
-          <Link to="/">Home </Link>
-          <Link to="/about">About Us </Link>
-          <Link to="/shop">Shop Now </Link>
-          <Link to="/links">Links </Link>
+          <Link to="/"> Home  </Link>
+          <Link to="/about">  About Us  </Link>
+          <Link to="/shop"> Shop Now  </Link>
+          <Link to="/links">  Links </Link>
         </div>
 
         

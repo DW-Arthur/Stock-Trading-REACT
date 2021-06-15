@@ -1,7 +1,29 @@
-import React from "react"
+import React, { Component } from "react"
 
-function ShopNow() {
-  return <h1>Shop Now</h1>
+class ShopNow extends Component {
+
+
+  render() {
+    return( 
+    
+    
+    
+    <h1> Shop Now </h1>
+
+
+
+
+
+    );
+  }
+
+
+
+
+
+
+
+
 }
 
 export default ShopNow
