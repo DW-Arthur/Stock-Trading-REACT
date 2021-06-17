@@ -22,7 +22,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+//  handleChange(event) { =>
+//    this.setState({value: event.target.value});
+//  }
 
+ const handleChange = (event) => {
+  this.setState({value: event.target.value});
+}
+
+const handleSubmit = (event) => {
+  this.setState({value: event.target.value});
+}
+
+// handleSubmit(event) {
+//   alert('An essay was submitted: ' + this.state.value);
+//   event.preventDefault();
+// }
 
 
 export default function ShopNow() {
@@ -30,24 +45,31 @@ export default function ShopNow() {
   const [stockname, setStockname] = useState('');
   const [stockprice, setStockprice] = useState('');
 
+    // this.setState({symbol : e.target.value});
+    // console.log("e.targer.value gives :"+ e.target.value)
+    // console.log(this.state.symbol) //this prints the previous one...werid
+    // this.fetchStock(e.target.value)
+
+  
+
   return( 
 
       <span>
 
       
-        <form className={classes.textField} noValidate autoComplete="off">
+        <form className={classes.textField} noValidate autoComplete="off" onSubmit={this.handleSubmit} method='get' target='_blank'>
             <TextField 
             InputProps={{
             className: classes.input,}}
-            id="stock-name" label="Stock Name" variant="filled" 
-            value={stockname} onChange={setStockname}    
+            id="stock-name" label="Stock Name" variant="filled"
+            onChange={() => this.handleChange()}
             />
 
             <TextField 
             InputProps={{
             className: classes.input,}}
             id="stock-amount" label="Stock Amount" variant="filled" 
-            value={stockprice} onChange={setStockprice}    
+            onChange={setStockprice}    
             />
             
         </form>

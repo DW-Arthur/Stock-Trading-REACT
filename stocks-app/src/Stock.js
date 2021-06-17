@@ -53,8 +53,6 @@ class Stock extends React.Component{
                   //console.log(stockChartXValuesFunction)
                   //for testing 
               }
-
-              
           )
     }
     onChange = e=>{
