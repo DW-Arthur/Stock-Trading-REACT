@@ -24,6 +24,7 @@ class App extends Component {
   }
 
   componentWillMount() {
+      console.log('component will mount')
       this.callAPI(); //componentWillMount will trgger before the initial render(when the component load)
   }
 
