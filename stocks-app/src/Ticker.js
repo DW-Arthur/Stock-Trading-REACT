@@ -27,7 +27,11 @@ function Ticker() {
 
     req.end(function (res) {
         
-        if (res.error) throw new Error(res.error);
+        if (res.error){
+            setStockName("Exceed API call limit")
+            return
+        }
+        
 
         console.log(res.body);
         price= res.body
