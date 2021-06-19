@@ -1,7 +1,9 @@
 import React from "react"
-
+import '../css/shop.css'
 function ShopNow() {
-  return <h1>Shop Now</h1>
+  return <div className='shop-class'>
+   <h1>Shop Now</h1>
+   </div>
 }
 
 export default ShopNow
