@@ -1,6 +1,7 @@
 import React, { Component} from "react";
 import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
-import Resource from '../resources';
+import Resource from './resources';
+import '../css/links.css'
 
 class Links extends Component {
 
@@ -22,7 +23,7 @@ class Links extends Component {
   render() {
   return (
   
-  <h1>
+  <div className='links-class'>
   
   <a
   className="App-link"
@@ -36,7 +37,9 @@ class Links extends Component {
   <Route exact path="/resource" component ={Resource}/>
   <p>User 1 <span class="tab"></span> User 2 <span class="tab"></span> User 3</p>
   <p className="App-intro">;{this.state.apiResponse}</p>
-  <noscript>Test</noscript></h1>
+  <noscript>Test</noscript>
+  </div>
+  
   )
   }
 }

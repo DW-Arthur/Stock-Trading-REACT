@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import Resource from './resources'
+import Resource from './components/resources'
 import {Switch, Route, Link} from 'react-router-dom';
 import Home from './components/Home';
 import Reviews from './components/reviews';
@@ -31,8 +31,9 @@ class App extends Component {
   render() {
     return(
       <div className="App">
-        <Router>
-          <Navbar></Navbar>
+          
+        <Router >
+        <Navbar></Navbar>
           <Route path = "/" exact>
             <Home></Home>
           </Route>
@@ -44,11 +45,10 @@ class App extends Component {
           </Route>
           <Route path="/shop" component={Shop} />
           <Route path="/about" component={About} />
-          <Route path="/terminology" component={Links} />
+          <Route path="/links" component={Links} />
           <Route exact path="/resource" component ={Resource}/>
         </Router>
       <header className="App-header">
-      <noscript>Test</noscript>
       {/* <p className="App-intro">;{this.state.apiResponse}</p> */}
         {/* create the Resource page */}
         

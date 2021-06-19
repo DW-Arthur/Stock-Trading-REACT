@@ -1,6 +1,6 @@
 import React, { Component} from "react";
 import stock from './stock.gif';
-import './Home.css';
+import  '../css/Home.css';
 import Stock from './Stock'
 import Ticker from "./Ticker"
 class Home extends Component {
