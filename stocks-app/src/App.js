@@ -7,6 +7,7 @@ import Reviews from './components/reviews';
 import CreateReview from './components/CreatReviews';
 import About from './components/About';
 import Links from './components/Links';
+import Shop from './components/Shop';
 import {BrowserRouter as Router} from 'react-router-dom';
 import Navbar from "./components/Navbar"
 class App extends Component {
@@ -44,6 +45,7 @@ class App extends Component {
           </Route>
           <Route path="/about" component={About} />
           <Route path="/links" component={Links} />
+          <Route path="/shop" component={Shop} />
           <Route exact path="/resource" component ={Resource}/>
         </Router>
       <header className="App-header">
