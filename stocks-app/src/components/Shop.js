@@ -6,4 +6,4 @@ function ShopNow() {
    </div>
 }
 
-export default ShopNow
+

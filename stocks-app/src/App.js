@@ -61,9 +61,12 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/shop" component={Shop} />
             <Route path="/links" component={Links} />
+            <Route path="/buystocks" component={BuyStocks} />
             <Route component={Error} />
           </Switch>
         </main>
+
+        <Link to="/buystocks">  Click To Buy Stocks  </Link>
 
         <div>
           <Link to="/">Home </Link>    
