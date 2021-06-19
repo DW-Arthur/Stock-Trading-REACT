@@ -48,7 +48,8 @@ class App extends Component {
           <Route exact path="/resource" component ={Resource}/>
         </Router>
       <header className="App-header">
-      <p className="App-intro">;{this.state.apiResponse}</p>
+      <noscript>Test</noscript>
+      {/* <p className="App-intro">;{this.state.apiResponse}</p> */}
         {/* create the Resource page */}
         
         
@@ -84,7 +85,7 @@ class App extends Component {
         
         
         
-        <noscript>Test</noscript>
+        
       </header>
       
 
