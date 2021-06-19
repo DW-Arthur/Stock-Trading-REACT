@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Plot from 'react-plotly.js'; //$ npm install react-plotly.js plotly.js
 
 class Stock extends React.Component{

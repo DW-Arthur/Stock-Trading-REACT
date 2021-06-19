@@ -1,15 +1,15 @@
-import stock from './stock.gif';
-import Stock from './Stock';
 import './App.css';
 import React, { Component } from 'react';
 import Resource from './resources'
 import {Switch, Route, Link} from 'react-router-dom';
 import Home from './components/Home';
+import Reviews from './components/reviews';
+import CreateReview from './components/CreatReviews';
 import About from './components/About';
 import Shop from './components/Shop';
 import Links from './components/Links';
-import Ticker from './Ticker'
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
+import Navbar from "./components/Navbar"
 class App extends Component {
   constructor(props) {
     super(props);
@@ -31,16 +31,30 @@ class App extends Component {
   render() {
     return(
       <div className="App">
+        <Router>
+          <Navbar></Navbar>
+          <Route path = "/" exact>
+            <Home></Home>
+          </Route>
+          <Route path='/reviews'>
+            <Reviews />
+          </Route>
+          <Route path='/create'>
+            <CreateReview />
+          </Route>
+          <Route path="/shop" component={Shop} />
+          <Route path="/about" component={About} />
+          <Route path="/terminology" component={Links} />
+          <Route exact path="/resource" component ={Resource}/>
+        </Router>
       <header className="App-header">
-        <img src={stock} className="App-logo" alt="logo" />
-        <Stock>
+      <p className="App-intro">;{this.state.apiResponse}</p>
+        {/* create the Resource page */}
+        
+        
+        
 
-        </Stock>
-        <p>
-          Stock Trading Competition
-        </p>
-
-        <main>
+        {/* <main>
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/about" component={About} />
@@ -51,14 +65,14 @@ class App extends Component {
         </main>
 
         <div>
-          <Link to="/">Home </Link>
-          <Link to="/about">About Us </Link>
+          <Link to="/">Home </Link>    
+          <Link to="/about">About Us </Link> 
           <Link to="/shop">Shop Now </Link>
           <Link to="/links">Links </Link>
-        </div>
+        </div> */}
 
         
-        <a
+        {/* <a
           className="App-link"
           href="https://www.investopedia.com/"
           target="_blank"
@@ -66,15 +80,13 @@ class App extends Component {
         >
           Basic Trading Termninology
 
-        </a>
-        <Route exact path="/resource" component ={Resource}/>  {/* create the Resource page */}
-        <p>User 1 <span class="tab"></span> User 2 <span class="tab"></span> User 3</p>
-        <p className="App-intro">;{this.state.apiResponse}</p>
+        </a> */}
+        
+        
+        
         <noscript>Test</noscript>
       </header>
-      <div>
-        <Ticker />
-      </div>
+      
 
       
       </div>
