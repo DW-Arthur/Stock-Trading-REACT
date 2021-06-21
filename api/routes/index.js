@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+//npm i mongoose cors
 
 /*
 var unirest = require('unirest');
