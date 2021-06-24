@@ -4,11 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require("cors");
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testAPIRouter = require("./routes/testAPI"); //variable to link to the testAPI
+
 var app = express();
-const mongoose = require("mongoose")
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter); //adding middleware layers by calling use(), we can find "testAPI" in the stocks-app/src/app.js
+
 //app.use([path,] callback [, callback...])
 //Mounts the specified middleware function or functions at the specified path: the middleware function is executed when the base of the requested path matches path.
 
@@ -43,9 +47,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-//connect to mongoose
 
-app.listen(3001, function(){
-  console.log("express server is running on port 3001")
-})
 module.exports = app;

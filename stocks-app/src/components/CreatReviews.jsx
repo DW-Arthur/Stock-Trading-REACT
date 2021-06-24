@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from "react";
-
+import axios from "axios" //axios is used for Http API request, a better way than do it with fetch()// .then.catch is also used.
 function CreateReview() {
 
     
@@ -8,18 +8,15 @@ function CreateReview() {
         content:''
     })
 
-    useEffect(() => {
-        console.log('rener');
-     },[input])
+    // useEffect(() => {
+    //     console.log('rener');
+    //  },[input])
 
     function handleChange(event){
         const {name, value} =event.target;
-        console.log(value)
 
-        console.log(1)
         setInput(prevInput=>
             {
-                console.log(2)
                 return{
                      ...prevInput, //...prevInput is to reserve the last Input
                      [name]: value //name is dynamic, "title" then setTitle, "content" then setContent.
@@ -27,13 +24,17 @@ function CreateReview() {
                 }
             }
         )
-        console.log(3)
         console.log(event.target);
     }
 
     function handleClick(event){
         event.preventDefault();
-        console.log(input);
+        const newReview = {
+            title: input.title,
+            content: input.content
+        }
+        console.log("clicked")
+        axios.post('http://localhost:3001/create' , newReview) //post to 3001 with our new review
     }
 
     function handleKeyUp(event){
@@ -46,7 +47,7 @@ function CreateReview() {
         <h1>Create Review</h1>
         <form>
             <div className="form-group">
-                <input onChange={handleChange} name="title" value={input.content} autoComplete="off" className = 'form-control' placeholder="Your Name"></input>
+                <input onChange={handleChange} name="title" value={input.title} autoComplete="off" className = 'form-control' placeholder="Your Name"></input>
             </div>
 
             <div className="form-group">
