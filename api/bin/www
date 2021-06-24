@@ -17,12 +17,12 @@ var port = normalizePort(process.env.PORT || '9000'); //changed from 3000 to 900
 app.set('port', port);
 
 var port2 = normalizePort(process.env.PORT || '3001');
-app2.set('port',port2)
+app2.set('port',port2) //asign app2 with port 3001
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var server = http.createServer(app); //create a server object using app
 var server2 = http.createServer(app2)
 
 /**

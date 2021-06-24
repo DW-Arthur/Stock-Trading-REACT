@@ -7,6 +7,6 @@ const reviewSchema = {
     content:String
 }
 
-const Review = mongoose.model("Review",reviewSchema);
+const Review = mongoose.model("Review",reviewSchema); //returns a mongoose model
 
 module.exports = Review; //Review model is created 

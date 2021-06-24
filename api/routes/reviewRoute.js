@@ -18,4 +18,9 @@ router.route("/create").post((req,res)=>{
     newReview.save() //save is mongoose method, to update the database.
 })
 
+router.route('/reviews').get((req,res)=>{
+    Review.find() //Review.find() go look for the database.
+        .then(foundReview => res.json(foundReview))
+})
+
 module.exports = router;
