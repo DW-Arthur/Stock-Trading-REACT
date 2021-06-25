@@ -15,7 +15,6 @@ function CreateReview() {
 
     function handleChange(event){
         const {name, value} =event.target;
-
         setInput(prevInput=>
             {
                 return{

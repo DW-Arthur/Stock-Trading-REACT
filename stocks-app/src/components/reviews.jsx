@@ -22,7 +22,7 @@ function Reviews() {
         {console.log(reviews)}
         <div class="card-deck">
         {reviews.slice(0).reverse().map(review=>
-                 <div className='card text-white bg-dark mb-3' >
+                 <div className='card text-white bg-secondary mb-3' >
                      <div class="card-header">{"Name: "+review.title}</div>
                      <div class="card-body">{review.content}</div>
                  </div>
