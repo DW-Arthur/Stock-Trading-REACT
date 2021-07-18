@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import Resource from './components/resources'
+import Trade from './components/trade'
 import {Switch, Route, Link} from 'react-router-dom';
 import Home from './components/Home';
 import Reviews from './components/reviews';
@@ -46,7 +46,7 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/links" component={Links} />
           <Route path="/shop" component={Shop} />
-          <Route exact path="/resource" component ={Resource}/>
+          <Route exact path="/trade" component ={Trade}/>
         </Router>
         <header className="App-header">
        {/* <p className="App-intro">;{this.state.apiResponse}</p> */}
