@@ -1,14 +1,13 @@
 import './App.css';
 import React, { Component } from 'react';
 import Trade from './components/trade'
-import {Switch, Route, Link} from 'react-router-dom';
+import {Switch, Route, Link,BrowserRouter as Router} from 'react-router-dom';
 import Home from './components/Home';
 import Reviews from './components/reviews';
 import CreateReview from './components/CreatReviews';
 import About from './components/About';
 import Links from './components/Links';
 import Shop from './components/Shop';
-import {BrowserRouter as Router} from 'react-router-dom';
 import Navbar from "./components/Navbar"
 class App extends Component {
   constructor(props) {
