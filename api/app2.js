@@ -1,6 +1,6 @@
 var cors = require("cors");
-var mongoose = require("mongoose")
-var express = require("express")
+var mongoose = require("mongoose");
+var express = require("express");
 var app2 = express();
 var createRouter = require("./routes/reviewRoute")
 
