@@ -1,6 +1,6 @@
 import React, { Component} from "react";
 import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
-import Trade from './trade';
+import Trade from './Trade';
 import '../css/links.css'
 
 class Links extends Component {
