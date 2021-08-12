@@ -2,17 +2,10 @@ import React, {useState,useEffect} from "react";
 import axios from "axios" //axios is used for Http API request, a better way than do it with fetch()// .then.catch is also used.
 import  '../css/createReviews.css';
 function CreateReview() {
-
-    
     const [input, setInput] = useState({
         title:'',
         content:''
     })
-
-    // useEffect(() => {
-    //     console.log('rener');
-    //  },[input])
-
     function handleChange(event){
         const {name, value} =event.target;
         setInput(prevInput=>
@@ -26,7 +19,6 @@ function CreateReview() {
         )
         console.log(event.target);
     }
-
     function handleClick(event){
         event.preventDefault();
         const newReview = {
@@ -38,7 +30,6 @@ function CreateReview() {
                 return{
                     title:"",
                     content:""
-
                 }
             }
             
@@ -47,13 +38,11 @@ function CreateReview() {
         console.log("sending: "+newReview.title+"+" +newReview.content)
         axios.post('http://localhost:3001/create' , newReview) //post to 3001/create with our new review, see reviewRoute.js
     }
-
     function handleKeyUp(event){
         if(event.keyCode==13){ //"Enter" Kyepress has the Keycode of 13
             handleClick(event)
         }
     }
-
     return <div className = "create-class">
         <h1 className="head">Create Review</h1>
         <form>

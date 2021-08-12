@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import Trade from './components/trade'
+import Trade from './components/Trade'
 import {Switch, Route, Link,BrowserRouter as Router} from 'react-router-dom';
 import Home from './components/Home';
 import Reviews from './components/reviews';
