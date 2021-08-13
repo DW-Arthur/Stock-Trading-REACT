@@ -17,7 +17,8 @@ function Reviews() {
         })
     },[])
 
-    return <div className="review-class" >
+    return (
+    <div className="review-class" >
         <h1 >Reviews page</h1>
         {console.log(reviews)}
         <div class="card-deck">
@@ -29,7 +30,7 @@ function Reviews() {
             )}
         </div>
     </div>
-}
+)}
 
 
 export default Reviews;
