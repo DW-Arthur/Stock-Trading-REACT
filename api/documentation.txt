@@ -1,5 +1,5 @@
 Mongo Atlas
     email: stonkproject@yandex.ru
-    password: stonk123
+    password: {password}
 
  
